@@ -20,6 +20,7 @@ protected:
    string            m_periodOrPrice;
    string            m_msg;
    string            m_type;
+   string            m_original_msg;
 public:
                      CItem(void);
                     ~CItem(void);
@@ -31,7 +32,7 @@ public:
    
    void              setSymbo(string str)    { m_symbo=str;                           };
    void              setPeriodOrPrice(string str)    { m_periodOrPrice=str;                           };
-   void              setMsg(string str)    { m_msg=str;                           };
+   void              setMsg(string str)    { m_msg=str;m_original_msg=str;  };
   };
 //+------------------------------------------------------------------+
 //| Constructor                                                      |
@@ -41,6 +42,7 @@ CItem::CItem(void)
     m_symbo = "";
     m_periodOrPrice = "";
     m_msg = "";
+    m_original_msg = "";
   }
 //+------------------------------------------------------------------+
 //| Destructor                                                       |
